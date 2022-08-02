@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather Api</title>
+</head>
+<body>
+  
+  <main>
+    <section id="data-continer">
+      <div class="search-continer">
+        <input type="text" placeholder="enter city" /> <button>Search</button>
+      </div>
+      <p class="loading hidden">Loading...</p>
+      <div class="information">
+        <h2 class="city-name">Weather in Gaza</h2>
+        <h1 class="temp">36°C</h1>
+        <div class="icon-description-continer">
+          <img
+            class="icon"
+            src="https://openweathermap.org/img/wn/01d.png"
+            alt=""
+          />
+          <p class="description">Clear Sky</p>
+        </div>
+        <p class="humidity">Humidity: 50%</p>
+        <p class="wind">Wind Speed:5.13 km/h</p>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
