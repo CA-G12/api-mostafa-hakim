@@ -10,6 +10,7 @@ searchBtn.addEventListener("click", () => {
   }
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${key}&units=metric`;
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput.value}?unitGroup=metric&key=VPA2TH3SE9TJ9UYGQQBL9F33K&contentType=json`;
+  daysContiner.textContent = '';
   fetch(url, (data) => {
     buildDom(data);
     week(data);
@@ -21,6 +22,7 @@ function fetch(url, cb) {
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
+      loading.classList.add('hidden')
       if (xhr.status === 200) {
         let data = JSON.parse(xhr.responseText);
         console.log(data);
@@ -32,6 +34,8 @@ function fetch(url, cb) {
         information.classList.add("hidden");
         weekInfo.classList.add("hidden");
       }
+    } else {
+      loading.classList.remove('hidden')
     }
   };
   xhr.open("GET", url);

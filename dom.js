@@ -74,10 +74,3 @@ function buildDomWeakSection(data,max,min) {
 
   dayCard.appendChild(wind);
 }
-
-// function maxTemp(){
-// let temps = document.querySelectorAll('.week-section-temp')
-// console.log(temps)
-// let Max = 0
-// console.log(temps[0].slice(10,14))
-// }
