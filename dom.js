@@ -3,6 +3,7 @@ const searchBtn = document.querySelector(".search-btn");
 const loading = document.querySelector(".loading");
 const information = document.querySelector(".information");
 const daysContiner = document.querySelector(".days-continer");
+const weekInfo = document.querySelector('.situation-week')
 
 function buildDom(data) {
   let cityName = document.querySelector(".city-name");

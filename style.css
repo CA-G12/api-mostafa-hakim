@@ -14,6 +14,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 section#data-continer {
   width: 40%;
@@ -80,8 +81,6 @@ section#data-continer * {
 .icon-description-continer {
   display: flex;
   justify-content: flex-start;
-  /* width: 400px; */
-  /* width: 400px; */
   align-items: center;
   height: 60px;
   padding-left: 0.8rem;
@@ -101,11 +100,12 @@ section#data-continer * {
   display: none;
 }
 
-#situation-week {
+.situation-week {
   margin-top: 5rem;
   width: 100%;
+
 }
-#situation-week #title-section {
+.situation-week #title-section {
   width: max-content;
   margin: 0 auto;
   color: #010101e3;
