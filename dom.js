@@ -18,8 +18,7 @@ function buildDom(data) {
   let wind = document.querySelector(".wind");
   wind.textContent = `Wind speed: ${data.currentConditions.windspeed} km/h`;
   let mainContainer = document.querySelector("main");
-  mainContainer.style.backgroundImage = `url("https://source.unsplash.com/1600x900/?${data.name}")`;
-  console.log(data.name);
+  mainContainer.style.backgroundImage = `url("https://source.unsplash.com/1600x900/?${data.address}")`;
 }
 
 function buildDomWeakSection(data) {
@@ -33,10 +32,15 @@ function buildDomWeakSection(data) {
   dateTime.textContent = data.datetime;
   dayCard.appendChild(dateTime);
 
-  let temp = document.createElement("h1");
+  let temp = document.createElement("h2");
   temp.setAttribute("class", "temp");
-  temp.textContent = `${data.temp}°C`;
+  temp.textContent = `Max Temp: ${data.tempmax}°C`;
   dayCard.appendChild(temp);
+
+  let minTemp = document.createElement("h3");
+  minTemp.setAttribute("class", "minTemp");
+  minTemp.textContent = `Min Temp: ${data.tempmin}°C`;
+  dayCard.appendChild(minTemp);
 
   let iconDescriptionContiner = document.createElement("div");
   iconDescriptionContiner.setAttribute("class", "icon-description-continer");
@@ -44,7 +48,7 @@ function buildDomWeakSection(data) {
 
   let icon = document.createElement("img");
   icon.setAttribute("class", "icon");
-  icon.textContent = data.icon;
+  icon.src = `https://openweathermap.org/img/wn/01d.png`;
   iconDescriptionContiner.appendChild(icon);
 
   let description = document.createElement("p");
@@ -62,21 +66,4 @@ function buildDomWeakSection(data) {
   wind.textContent = `Wind speed: ${data.windspeed} km/h`;
 
   dayCard.appendChild(wind);
-}
-
-{
-  /* <div class="day">
-<h2 class="date-time">3/8/2022</h2>
-<h1 class="temp">36°C</h1>
-<div class="icon-description-continer">
-  <img
-    class="icon"
-    src="https://openweathermap.org/img/wn/01d.png"
-    alt=""
-  />
-  <p class="description">Clear Sky</p>
-</div>
-<p class="humidity">Humidity: 50%</p>
-<p class="wind">Wind Speed:5.13 km/h</p>
-</div> */
 }
