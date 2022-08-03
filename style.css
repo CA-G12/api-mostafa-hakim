@@ -72,15 +72,16 @@ section#data-continer * {
   font-size: 1.6rem;
 }
 
-.temp {
+.information .temp {
   font-size: 2.5rem;
   margin-top: 0.7rem;
 }
 
 .icon-description-continer {
   display: flex;
-  justify-content: space-between;
-  width: 400px;
+  justify-content: flex-start;
+  /* width: 400px; */
+  /* width: 400px; */
   align-items: center;
   height: 60px;
   padding-left: 0.8rem;
@@ -101,11 +102,12 @@ section#data-continer * {
 }
 
 #situation-week {
+  margin-top: 5rem;
   width: 100%;
 }
 #situation-week #title-section {
   width: max-content;
-  margin: 20px auto;
+  margin: 0 auto;
   color: #010101e3;
 }
 .days-continer {
@@ -124,4 +126,7 @@ section#data-continer * {
     rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
   margin: 20px 0;
   padding-top: 50px;
+  line-height: 1.5;
 }
+
+#map { height: 500px; width: 70%; margin: 0 auto 5rem}
