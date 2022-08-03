@@ -22,7 +22,7 @@ function buildDom(data) {
   mainContainer.style.backgroundImage = `url("https://source.unsplash.com/1600x900/?${data.address}")`;
 }
 
-function buildDomWeakSection(data) {
+function buildDomWeakSection(data,max,min) {
   console.log("tesssssssssssst", data);
   let dayCard = document.createElement("div");
   dayCard.setAttribute("class", "day");
@@ -35,11 +35,17 @@ function buildDomWeakSection(data) {
 
   let temp = document.createElement("h2");
   temp.setAttribute("class", "temp");
+  if(data.tempmax ===max){
+    dayCard.style.backgroundColor ="#FFC3C3"
+}
   temp.textContent = `Max Temp: ${data.tempmax}°C`;
   dayCard.appendChild(temp);
 
   let minTemp = document.createElement("h3");
   minTemp.setAttribute("class", "minTemp");
+  if(data.tempmin ===min){
+    dayCard.style.backgroundColor ="#D6EFED"
+}
   minTemp.textContent = `Min Temp: ${data.tempmin}°C`;
   dayCard.appendChild(minTemp);
 
@@ -68,3 +74,10 @@ function buildDomWeakSection(data) {
 
   dayCard.appendChild(wind);
 }
+
+// function maxTemp(){
+// let temps = document.querySelectorAll('.week-section-temp')
+// console.log(temps)
+// let Max = 0
+// console.log(temps[0].slice(10,14))
+// }

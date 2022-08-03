@@ -6,7 +6,7 @@ const key = "776f41f2e73c416078fa91fabe5ea7b4";
 searchBtn.addEventListener("click", () => {
   if (searchInput.value) {
     loading.setAttribute("class", "hidden");
-    weekInfo.classList.remove('hidden')
+    weekInfo.classList.remove("hidden");
   }
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${key}&units=metric`;
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput.value}?unitGroup=metric&key=VPA2TH3SE9TJ9UYGQQBL9F33K&contentType=json`;
@@ -30,7 +30,7 @@ function fetch(url, cb) {
         loading.innerHTML = `<br><br>error ${xhr.status}<br><br>  Please enter the correct country or city name`;
         loading.classList.remove("hidden");
         information.classList.add("hidden");
-        weekInfo.classList.add('hidden')
+        weekInfo.classList.add("hidden");
       }
     }
   };
@@ -39,9 +39,19 @@ function fetch(url, cb) {
 }
 
 function week(data) {
+  let max = 0;
+  let min = data.days[0].tempmin;
   for (let i = 0; i < 7; i++) {
-    console.log(data.days[i]);
-    buildDomWeakSection(data.days[i]);
+    if (max < data.days[i].tempmax) {
+      max = data.days[i].tempmax;
+    }
+    if (min > data.days[i].tempmin) {
+      min = data.days[i].tempmin;
+    }
+  }
+  console.log(min)
+  for (let i = 0; i < 7; i++) {
+    buildDomWeakSection(data.days[i], max, min);
   }
 }
 
