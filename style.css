@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #010101;
   text-decoration: none;
 }
@@ -139,7 +141,7 @@ section#data-continer * {
   flex-wrap: wrap;
 }
 .day {
-  width: 300px;
+  width: 350px;
   padding: 30px;
   border-radius: 15px;
   height: 350px;

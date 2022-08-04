@@ -25,7 +25,6 @@ function fetch(url, cb) {
       loading.classList.add('hidden')
       if (xhr.status === 200) {
         let data = JSON.parse(xhr.responseText);
-        console.log(data);
         cb(data);
         information.classList.remove("hidden");
       } else {
@@ -53,7 +52,6 @@ function week(data) {
       min = data.days[i].tempmin;
     }
   }
-  console.log(min)
   for (let i = 0; i < 7; i++) {
     buildDomWeakSection(data.days[i], max, min);
   }

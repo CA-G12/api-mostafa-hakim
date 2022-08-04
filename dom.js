@@ -23,7 +23,6 @@ function buildDom(data) {
 }
 
 function buildDomWeakSection(data,max,min) {
-  console.log("tesssssssssssst", data);
   let dayCard = document.createElement("div");
   dayCard.setAttribute("class", "day");
   daysContiner.appendChild(dayCard);
