@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Poppins", sans-serif; */
   font-family: 'Poppins', sans-serif;
   color: #010101;
   text-decoration: none;
@@ -142,7 +141,7 @@ section#data-continer * {
   flex-wrap: wrap;
 }
 .day {
-  width: 320px;
+  width: 350px;
   padding: 30px;
   border-radius: 15px;
   height: 350px;
